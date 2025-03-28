@@ -1,15 +1,12 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', function () {
-    return Inertia::render('Phonebook');
-})->name('home');
-
-Route::get('dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/', [ContactController::class, 'index'])->name('home');
+Route::post('/contacts', [ContactController::class, 'store'])->name('contacts.store');
+Route::delete('/contacts/{contact}', [ContactController::class, 'destroy'])->name('contacts.destroy');
+Route::get('/search', [ContactController::class, 'search'])->name('contacts.search');
 
 require __DIR__.'/settings.php';
-require __DIR__.'/auth.php';
