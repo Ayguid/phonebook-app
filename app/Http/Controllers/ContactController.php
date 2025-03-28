@@ -27,10 +27,11 @@ class ContactController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'phone_number' => 'required|string|max:20',
+            'phone_number' => 'required|string|max:20|unique:contacts,phone_number'
         ]);
 
-        $contact = Contact::create($validated);
+        Contact::create($validated);
+
         return redirect()->back();
     }
 
