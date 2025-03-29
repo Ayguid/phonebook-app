@@ -38,6 +38,10 @@ composer install
 ```bash
 npm install && npm run build
 ```
+if in cmd/win 
+```bash
+(npm install) -and (npm run build)
+```
 
 4. Create a copy of the environment file:
 ```bash
@@ -52,6 +56,10 @@ php artisan key:generate
 6. Create the SQLite database file:
 ```bash
 touch database/database.sqlite
+```
+if in cmd/win 
+```bash
+echo database/database.sqlite
 ```
 
 7. Run database migrations and seeders:
