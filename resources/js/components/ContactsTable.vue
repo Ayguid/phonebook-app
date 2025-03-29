@@ -11,7 +11,7 @@ const props = defineProps({
 // Ensure pagination includes the search query
 const changePage = (page: number) => {
     router.get('/', { 
-        query: props.searchQuery, 
+        ...(props.searchQuery && { query: props.searchQuery }), // Only add query if it exists
         page: page 
     }, {
         preserveState: true, 
