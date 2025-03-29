@@ -34,7 +34,7 @@ cd phonebook-app
 composer install
 ```
 
-3. Install Node.js dependencies and build assets: (should run together &&, dont run them separately)
+3. Install Node.js dependencies and build assets:
 ```bash
 npm install && npm run build
 ```

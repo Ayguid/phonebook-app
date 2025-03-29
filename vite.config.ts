@@ -32,5 +32,12 @@ export default defineConfig({
         postcss: {
             plugins: [tailwindcss, autoprefixer],
         },
-    },
+    },  build: {
+        rollupOptions: {
+          external: ['vue-i18n'], // Add this line
+        },
+      },
+      optimizeDeps: {
+        include: ['vue-i18n'] // And this line
+      }
 });
