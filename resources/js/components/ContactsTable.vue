@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { router } from '@inertiajs/vue3';
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 
 const props = defineProps({
     contacts: Object,
@@ -18,7 +20,7 @@ const changePage = (page: number) => {
 };
 
 const deleteContact = (contact) => {
-    if (confirm('Are you sure you want to delete this contact?')) {
+    if (confirm(t('phonebook.confirm_delete'))) {
         router.delete(`/contacts/${contact.id}`);
     }
 };
