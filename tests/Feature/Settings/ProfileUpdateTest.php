@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\User;
+/* use App\Models\User;
 
 uses(\Illuminate\Foundation\Testing\RefreshDatabase::class);
 
@@ -84,4 +84,4 @@ test('correct password must be provided to delete account', function () {
         ->assertRedirect('/settings/profile');
 
     expect($user->fresh())->not->toBeNull();
-});
+}); */

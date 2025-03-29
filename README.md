@@ -85,12 +85,12 @@ The application uses Pest PHP for backend testing and Vitest for frontend compon
 
 ### Backend Tests (Pest)
 
-Run all backend tests:
+Run all backend tests: (auth-related features are not enabled)
 ```bash
 php artisan test
 ```
 
-Run specific test file: (Only run this one, as there are no auth features yet)
+Run specific test file: 
 ```bash
 php artisan test tests/Unit/ContactTest.php -v
 ```
@@ -170,6 +170,12 @@ The database file is located at `database/database.sqlite`.
 - Models in `app/Models/`
 - Migrations in `database/migrations/`
 - Seeders in `database/seeders/`
+
+### Notes
+- All of laravels default auth code has been bypassed for simplicity, but not removed.
+- Contacts could be easily added with a relationship to the user_id. But again, simple. For now the apps runs locally for a single user.
+- Auth-related tests have been commented out. But not removed, might need them in the future.
+- Adding user register-login, so each user could have its own contacts should be simple, as nothing in the auth-scaffold was deleted.
 
 ## Contributing
 

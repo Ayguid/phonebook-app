@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\User;
+/* use App\Models\User;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Support\Facades\Notification;
 
@@ -59,4 +59,4 @@ test('password can be reset with valid token', function () {
 
         return true;
     });
-});
+}); */
