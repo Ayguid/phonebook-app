@@ -1,0 +1,34 @@
+{
+    "phonebook": {
+        "title": "Phonebook",
+        "add_contact": "Add New Contact",
+        "name": "Name",
+        "phone_number": "Phone Number",
+        "submit": "Add Contact",
+        "error": {
+            "name_required": "Name is required.",
+            "phone_unique": "This phone number is already registered."
+        },
+        "delete": "Delete",
+        "edit": "Edit",
+        "search": "Search contacts...",
+        "search_placeholder": "Search by name or phone number...",
+        "no_contacts": "No contacts found",
+        "pagination": {
+            "showing": "Showing",
+            "to": "to",
+            "of": "of",
+            "results": "results",
+            "previous": "Previous",
+            "next": "Next"
+        },
+        "confirm_delete": "Are you sure you want to delete this contact?",
+        "cancel": "Cancel",
+        "confirm": "Confirm",
+        "success": {
+            "created": "Contact created successfully",
+            "updated": "Contact updated successfully",
+            "deleted": "Contact deleted successfully"
+        }
+    }
+} 

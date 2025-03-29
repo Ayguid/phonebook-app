@@ -1,0 +1,34 @@
+{
+    "phonebook": {
+        "title": "Agenda Telefónica",
+        "add_contact": "Agregar Nuevo Contacto",
+        "name": "Nombre",
+        "phone_number": "Número de Teléfono",
+        "submit": "Agregar Contacto",
+        "error": {
+            "name_required": "El nombre es requerido.",
+            "phone_unique": "Este número de teléfono ya está registrado."
+        },
+        "delete": "Eliminar",
+        "edit": "Editar",
+        "search": "Buscar contactos...",
+        "search_placeholder": "Buscar por nombre o número de teléfono...",
+        "no_contacts": "No se encontraron contactos",
+        "pagination": {
+            "showing": "Mostrando",
+            "to": "a",
+            "of": "de",
+            "results": "resultados",
+            "previous": "Anterior",
+            "next": "Siguiente"
+        },
+        "confirm_delete": "¿Está seguro de que desea eliminar este contacto?",
+        "cancel": "Cancelar",
+        "confirm": "Confirmar",
+        "success": {
+            "created": "Contacto creado exitosamente",
+            "updated": "Contacto actualizado exitosamente",
+            "deleted": "Contacto eliminado exitosamente"
+        }
+    }
+} 

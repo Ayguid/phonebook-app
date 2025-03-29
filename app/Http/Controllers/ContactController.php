@@ -11,14 +11,23 @@ class ContactController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $contacts = Contact::paginate(10);
+        $query = $request->input('query', ''); // Default to an empty string if no query
+    
+        $contacts = Contact::when($query, function ($q) use ($query) {
+                $q->where('name', 'like', "%{$query}%")
+                  ->orWhere('phone_number', 'like', "%{$query}%");
+            })
+            ->paginate(10)
+            ->appends(['query' => $query]); // Keep the query in pagination links
+    
         return Inertia::render('Phonebook', [
             'contacts' => $contacts,
-            'query' => ''
+            'query' => $query
         ]);
     }
+    
 
     /**
      * Store a newly created resource in storage.
@@ -60,16 +69,4 @@ class ContactController extends Controller
         return redirect()->back();
     }
 
-    public function search(Request $request)
-    {
-        $query = $request->input('query');
-        $contacts = Contact::where('name', 'like', "%{$query}%")
-            ->orWhere('phone_number', 'like', "%{$query}%")
-            ->paginate(10);
-        
-        return Inertia::render('Phonebook', [
-            'contacts' => $contacts,
-            'query' => $query
-        ]);
-    }
 }

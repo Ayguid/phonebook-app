@@ -13,6 +13,7 @@ A modern, responsive phonebook application built with Laravel, Inertia.js, and V
 - 📱 Mobile-first design
 - 🔒 Input validation and error handling
 - 📊 Pagination for contact list
+- 🌐 Multi-language support (English and Spanish)
 
 ## Prerequisites
 
@@ -68,6 +69,53 @@ composer run dev
 2. Open your browser and navigate to:
 ```
 http://localhost:8000
+```
+
+## Testing
+
+The application uses Pest PHP for backend testing and Vitest for frontend component testing.
+
+### Backend Tests (Pest)
+
+Run all backend tests:
+```bash
+php artisan test
+```
+
+Run specific test file: (Only run this one, as there are no auth features yet)
+```bash
+php artisan test tests/Unit/ContactTest.php -v
+```
+
+Run tests with verbose output:
+```bash
+php artisan test -v
+```
+
+### Frontend Tests (Vitest)
+
+Run all frontend component tests: (only tests add form, for now)
+```bash
+npm test
+```
+
+The frontend tests cover:
+- Component rendering
+- Form submission
+- Validation error handling
+- Component state management
+- User interactions
+
+Example test output:
+```bash
+PASS  resources/js/components/__tests__/ContactForm.test.ts
+✓ renders properly                                                             0.09s
+✓ submits form data when submitted                                             0.02s
+✓ shows validation errors when submitting empty form                           0.02s
+✓ toggles form visibility when button is clicked                              0.02s
+
+Tests:    4 passed (7 assertions)
+Duration: 0.29s
 ```
 
 ## Database Structure
