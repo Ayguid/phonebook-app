@@ -8,7 +8,7 @@
         "test:coverage": "vitest run --coverage",
         "format": "prettier --write resources/",
         "format:check": "prettier --check resources/",
-        "lint": "eslint . --ext .ts,.tsx,.vue,.js,.jsx --fix --ignore-path .gitignore"
+        "lint": "eslint . --ext .ts,.tsx,.vue,.js,.jsx --fix --ignore-pattern .gitignore"
     },
     "devDependencies": {
         "@eslint/js": "^9.19.0",
