@@ -5,7 +5,7 @@ A modern, responsive phonebook application built with Laravel, Inertia.js, and V
 ## Features
 
 - 📱 Responsive design that works on both mobile and desktop
-- 🔍 Real-time search functionality for contacts
+- 🔍 Search functionality for contacts
 - ➕ Add new contacts with name and phone number
 - ❌ Delete existing contacts
 - 📱 Collapsible add contact form to save space
@@ -147,7 +147,6 @@ The database file is located at `database/database.sqlite`.
 
 ### Search Functionality
 - Search contacts by name or phone number
-- Real-time search results
 - Case-insensitive search
 - Partial match support
 
