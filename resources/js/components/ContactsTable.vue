@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n';
 import { router } from '@inertiajs/vue3';
-
-const { t } = useI18n();
 
 const props = defineProps({
     contacts: Object,
